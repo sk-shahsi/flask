@@ -16,8 +16,9 @@ def register():
     if request.method == 'POST':
         name = request.form['name']
         city = request.form['city']
-        PhoneNumber = request.form['Phone Number']
-        return render_template('conform.html',name=name,city=city,PhoneNumber=PhoneNumber)
+        email = request.form['email']
+        phone = request.form['phone']
+        return render_template('conformation.html',name=name,city=city,email=email,phone=phone)
 #MAIN
 if __name__ == '__main__':
     web.run(debug=True)
